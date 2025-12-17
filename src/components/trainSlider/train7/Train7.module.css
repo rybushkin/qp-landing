@@ -1,0 +1,265 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90vw;
+    align-self: flex-start;
+    margin-top: calc(100vh * 0.132);/*110px;*/
+    height: calc(100vh*0.61);
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col {
+    width: calc(100vh * 0.254);
+    height: calc(0.254 * 100vh);
+    object-fit: contain;
+}
+
+.title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 30px;
+    font-style: normal;
+    font-size: calc(100vh * 0.048); /* 40px;*/
+    line-height: 85%;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: black;
+}
+
+
+.item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.itemsLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.subTitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: calc(100vh * 0.0216);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.subDesc {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    font-size: calc(100vh * 0.0144);
+    line-height: 1.3;
+    margin-top: 8px;
+    color: #666;
+    text-align: center;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 950px;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.number {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 82px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: bottom;
+    color: #DF2A35;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        margin-top: 140px;
+        height: calc(100dvh - 240px);
+        padding: 0 30px;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .col {
+        width: 120px;
+        height: 120px;
+    }
+
+    .subTitle {
+        font-size: 16px;
+    }
+
+    .subDesc {
+        font-size: 11px;
+    }
+
+    .numbers {
+        max-width: 500px;
+        margin-bottom: 25px;
+        flex-direction: column;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .content {
+        margin-top: 100px;
+        height: calc(100dvh - 110px);
+        padding: 0 15px;
+        justify-content: flex-start;
+        padding-top: 20px;
+        overflow-y: hidden; /* Allow scrolling if needed */
+    }
+
+    .wrap {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 30px;
+        line-height: 1.3;
+        flex-shrink: 0;
+    }
+
+    .numbers {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .item {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .col {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    .itemsLeft {
+        margin-left: 15px;
+        flex-direction: column;
+    }
+
+    .subTitle {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .subDesc {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-top: 6px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .content {
+        margin-top: 80px;
+        height: calc(100dvh - 190px);
+        padding: 0 10px;
+        padding-top: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .numbers {
+        gap: 10px;
+        margin-bottom:0;
+        max-width: 100%;
+    }
+
+    .item {
+        padding: 12px;
+    }
+
+    .col {
+        width: 70px;
+        height: 70px;
+    }
+
+    .itemsLeft {
+        margin-left: 12px;
+    }
+
+    .subTitle {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .subDesc {
+        font-size: 11px;
+        margin-top: 4px;
+        text-align: center;
+    }
+}
+
+/* Very Small Mobile Styles (iPhone SE etc) */
+@media (max-width: 375px), (max-height: 660px) {
+    .content {
+        margin-top: 70px;
+        height: calc(100dvh - 150px);
+    }
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .item {
+        padding: 0px;
+    }
+
+
+    .itemsLeft {
+        margin-left: 10px;
+    }
+
+    .subTitle {
+        font-size: 13px;
+    }
+
+    .subDesc {
+        font-size: 10px;
+    }
+}

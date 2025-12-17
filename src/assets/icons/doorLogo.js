@@ -1,0 +1,83 @@
+import React from "react";
+
+/**
+ * LogoComponent
+ *
+ * Props:
+ * - size: number | string (controls width and height, defaults to 81)
+ * - className: additional class names for the outer svg
+ * - style: additional inline styles
+ * - title: accessibility title
+ */
+export default function LogoComponent({ size = 81, className = "",ref = null, title = "Logo", ...props }) {
+    const numericSize = typeof size === "number" || parseInt(size, 10).toString() === size?.toString() ? size : 81;
+
+    return (
+        <svg
+            ref={ref}
+            width={numericSize}
+            height={numericSize}
+            viewBox="0 0 81 81"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
+            aria-label={title}
+            role="img"
+            {...props}
+        >
+            <g filter="url(#filter0_iii_244_1805)">
+                <g clipPath="url(#clip0_244_1805)">
+                    <rect width="81" height="81" rx="40.5" fill="#E7E8E6" fillOpacity="0.01" />
+                    <foreignObject x="-70.5083" y="-65" width="923" height="218">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: "blur(1px)", clipPath: "url(#bgblur_1_244_1805_clip_path)", height: "100%", width: "100%" }} />
+                    </foreignObject>
+                    <g filter="url(#filter1_g_244_1805)" data-figma-bg-blur-radius="2">
+                        <rect x="-40.5083" y="-35" width="863" height="158" fill="#E7E8E6" fillOpacity="0.1" />
+                    </g>
+                    <path d="M50.04 47.288C50.456 47.448 50.84 47.624 51.192 47.816C51.56 48.008 51.904 48.224 52.224 48.464V35.6H54.192V48.464C54.512 48.24 54.848 48.032 55.2 47.84C55.568 47.648 55.96 47.472 56.376 47.312V49.136C55.208 50.128 54.32 51.216 53.712 52.4H52.68C52.104 51.216 51.224 50.128 50.04 49.136V47.288ZM26.04 47.288C26.456 47.448 26.84 47.624 27.192 47.816C27.56 48.008 27.904 48.224 28.224 48.464V35.6H30.192V48.464C30.512 48.24 30.848 48.032 31.2 47.84C31.568 47.648 31.96 47.472 32.376 47.312V49.136C31.208 50.128 30.32 51.216 29.712 52.4H28.68C28.104 51.216 27.224 50.128 26.04 49.136V47.288Z" fill="#080708" />
+                </g>
+                <rect x="0.5" y="0.5" width="80" height="80" rx="40" stroke="#080708" />
+            </g>
+
+            <defs>
+                <filter id="filter0_iii_244_1805" x="-1" y="-1" width="83" height="83" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dx="1" dy="1" />
+                    <feGaussianBlur stdDeviation="1" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_244_1805" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dx="-1" dy="-1" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="effect1_innerShadow_244_1805" result="effect2_innerShadow_244_1805" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="effect2_innerShadow_244_1805" result="effect3_innerShadow_244_1805" />
+                </filter>
+                <filter id="filter1_g_244_1805" x="-70.5083" y="-65" width="923" height="218" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feTurbulence type="fractalNoise" baseFrequency="0.011111111380159855 0.011111111380159855" numOctaves="3" seed="2257" />
+                    <feDisplacementMap in="shape" scale="60" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+                    <feMerge result="effect1_texture_244_1805">
+                        <feMergeNode in="displacedImage" />
+                    </feMerge>
+                </filter>
+                <clipPath id="bgblur_1_244_1805_clip_path" transform="translate(70.5083 65)">
+                    <rect x="-40.5083" y="-35" width="863" height="158" />
+                </clipPath>
+                <clipPath id="clip0_244_1805">
+                    <rect width="81" height="81" rx="40.5" fill="white" />
+                </clipPath>
+            </defs>
+        </svg>
+    );
+}

@@ -1,0 +1,253 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90vw;
+    align-self: flex-start;
+    margin-top: calc(100vh * 0.132);/*110px;*/
+    height: calc(100vh*0.59);
+}
+
+.flag {
+    height: calc(100vh*0.144);
+    width:  calc(100vh*0.144);
+    object-fit: contain;
+}
+
+.subcontent {
+    margin-top: 10px;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: calc(100vh * 0.0114);/*12px;*/
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 30px;
+    font-style: normal;
+    font-size: calc(100vh * 0.048); /* 40px;*/
+    line-height: 85%;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: black;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(90vw / 5 - 2px );
+}
+
+.numbers {
+    display: flex;
+    vertical-align: center;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    font-family: "Anonymous Pro", monospace;
+    flex-wrap: wrap;
+}
+
+.subtitle {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: calc(100vh * 0.0216);
+    line-height: 1.3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 10px 0;
+    width: 100%;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .numbers {
+        gap: 15px;
+    }
+
+    .item {
+        width: calc(90vw / 5);
+    }
+
+    .flag {
+        height: 100px;
+        width: 100px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .subcontent {
+        font-size: 11px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .content {
+        margin-top: 100px;
+        height: calc(100dvh - 210px);
+        padding: 0 15px;
+        justify-content: flex-start;
+        padding-top: 20px;
+        overflow: hidden; /* Prevent overall scrolling */
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        flex-shrink: 0; /* Prevent title from shrinking */
+    }
+
+    .wrap {
+        width: 100%;
+        height: calc(100% - 80px); /* Reserve space for title */ /* Allow vertical scrolling */
+        padding: 10px 0;
+    }
+
+    .numbers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+        gap: 15px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .item {
+        min-width: auto;
+        border-radius: 8px;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 150px; /* Fixed height for consistent cards */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .flag {
+        height: 60px;
+        width: 60px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin: 10px 0 8px 0;
+        line-height: 1.2;
+    }
+
+    .subcontent {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .content {
+        margin-top: 100px;
+        height: calc(100dvh - 210px);
+        padding: 0 10px;
+        padding-top: 15px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .wrap {
+        height: calc(100% - 60px);
+    }
+
+    .numbers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 100%;
+        padding: 0 5px;
+    }
+
+    .item {
+        height: 100px;
+    }
+
+    .flag {
+        display: none;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin: 8px 0 6px 0;
+    }
+
+    .subcontent {
+        font-size: 12px;
+    }
+}
+
+/* Very Small Mobile Styles (iPhone SE etc) */
+@media (max-width: 375px), (max-height: 660px) {
+    .content {
+        margin-top: 70px;
+        height: calc(100dvh - 180px);
+    }
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .wrap {
+        height: calc(100% - 50px);
+    }
+
+    .numbers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+
+    .flag {
+        height: 45px;
+        width: 45px;
+    }
+
+    .subtitle {
+        font-size: 10px;
+    }
+
+    .subcontent {
+        font-size: 8px;
+        line-height: 1.2;
+    }
+}

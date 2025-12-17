@@ -1,0 +1,39 @@
+.footer {
+    padding: 40px 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #1a365d;
+}
+
+@media (max-width: 640px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.footer-contact {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-contact span {
+    color: #888;
+}
